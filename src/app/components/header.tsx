@@ -58,15 +58,6 @@ const Header = () => {
                             <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
                         </li>
                         <li className='hover:underline decoration-orange-500'>
-                            <Link href="/service" onClick={() => setIsOpen(false)}>Service</Link>
-                        </li>
-                        <li className='hover:underline decoration-orange-500'>
-                            <Link href="/resume" onClick={() => setIsOpen(false)}>Resume</Link>
-                        </li>
-                        <li className='hover:underline decoration-orange-500'>
-                            <Link href="/project" onClick={() => setIsOpen(false)}>Project</Link>
-                        </li>
-                        <li className='hover:underline decoration-orange-500'>
                             <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
                         </li>
                     </ul>
