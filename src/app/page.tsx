@@ -25,9 +25,9 @@ const Home = () => {
   <div className='mb-5  ml-5 sm:ml-[20%]'>
     <RiDoubleQuotesL className='text-zinc-800 font-bold text-3xl text-left' />
     <p className='text-xs sm:text-xs font-normal mt-2 text-zinc-800 '>
-     {`We will provide you awesome and <br /> clean websites
-      by Next.js & React <br /> exceptional and highly
-      recommend <br /> -ed nowadays at your own choice.`}
+     We will provide you awesome and <br /> clean websites
+      by Next.js and React <br /> exceptional and highly
+      recommend <br /> -ed nowadays at your own choice.
     </p>
     <div className='text-black flex gap-2 text-2xl mt-4'>
       <FaFacebook className='hover:text-orange-500' />
