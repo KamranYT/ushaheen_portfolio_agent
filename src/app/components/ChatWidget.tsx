@@ -77,15 +77,15 @@ export default function ChatWidget() {
     <>
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all z-50"
+        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Toggle Chat"
       >
         {isOpen ? (
-          <X className="h-6 w-6" />
+          <X className="h-5 w-5 sm:h-6 sm:w-6" />
         ) : (
-          <MessageCircle className="h-6 w-6" />
+          <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
         )}
       </motion.button>
 
@@ -96,16 +96,18 @@ export default function ChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-24 right-4 w-[380px] bg-white shadow-xl rounded-lg border z-50 overflow-hidden"
+            className="fixed bottom-20 sm:bottom-24 right-2 sm:right-4 w-[calc(100%-1rem)] sm:w-[380px] bg-white shadow-xl rounded-lg border z-50 overflow-hidden"
           >
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-4 text-white">
-              <h3 className="font-semibold text-lg">Chat with Kamran</h3>
-              <p className="text-sm text-blue-100">
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-3 sm:p-4 text-white">
+              <h3 className="font-semibold text-base sm:text-lg">
+                Chat with Kamran
+              </h3>
+              <p className="text-xs sm:text-sm text-blue-100">
                 Ask me anything about my portfolio
               </p>
             </div>
 
-            <div className="h-[400px] overflow-y-auto p-4 space-y-4 bg-gray-50">
+            <div className="h-[300px] sm:h-[400px] overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 bg-gray-50">
               {messages.length === 0 ? (
                 <div className="flex items-center justify-center h-full">
                   <div className="text-center text-gray-500">
@@ -161,10 +163,10 @@ export default function ChatWidget() {
               <div ref={messagesEndRef} />
             </div>
 
-            <div className="p-4 bg-white border-t">
+            <div className="p-3 sm:p-4 bg-white border-t">
               <div className="flex gap-2">
                 <input
-                  className="flex-1 p-3 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="flex-1 p-2 sm:p-3 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) =>
@@ -178,13 +180,13 @@ export default function ChatWidget() {
                   disabled={isLoading}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                  className="px-3 sm:px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1 sm:gap-2 text-sm"
                 >
                   {isLoading ? (
                     <Loader2 className="h-4 w-4 animate-spin" />
                   ) : (
                     <>
-                      <span>Send</span>
+                      <span className="hidden sm:inline">Send</span>
                       <Send className="h-4 w-4" />
                     </>
                   )}
