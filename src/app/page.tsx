@@ -38,7 +38,7 @@ const Home = () => {
   </div>
 
   <div className="image-container relative flex flex-col items-center">
-    <Image src="/c1.png" alt="" className="w-64 sm:w-64 md:w-80 ml-10" />
+    <img src="/c1.png" alt="" className="w-64 sm:w-64 md:w-80 ml-10" />
     <ul className='items-center absolute transform -translate-x-1/2 -translate-y-1/2 text-xs font-medium text-white bg-black bg-opacity-60 rounded-full py-1 border border-white top-[80%] left-2/4 flex justify-between w-40 ml-5'>
       {['/', '/hire-me'].map((path) => (
         <li key={path} className={`flex-1 text-center ${pathname === path ? 'bg-orange-500 text-white rounded-full py-1 ml-2 text-center' : 'text-white'}`}>

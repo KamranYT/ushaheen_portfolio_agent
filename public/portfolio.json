@@ -1,0 +1,22 @@
+{
+    "name": "Kamran",
+    "about": "Frontend Developer skilled in React, Next.js, Tailwind CSS, and TypeScript. Passionate about building modern, responsive UIs.",
+    "projects": [
+      {
+        "title": "Foodi",
+        "description": "E-commerce food website built with Next.js and Tailwind.",
+        "techStack": ["Next.js", "Tailwind", "CSS"]
+      },
+      {
+        "title": "ReXon Solution",
+        "description": "Animated company portfolio website.",
+        "techStack": ["Next.js", "Framer Motion"]
+      }
+    ],
+    "skills": ["React", "Next.js", "Tailwind", "TypeScript", "Framer Motion"],
+    "contact": {
+      "email": "youremail@example.com",
+      "linkedin": "https://linkedin.com/in/your-profile"
+    }
+  }
+  
